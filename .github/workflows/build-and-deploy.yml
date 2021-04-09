@@ -41,7 +41,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: ./src
-        file: ./src/Dockerfile
+        file: Dockerfile
         push: true
         tags: ghcr.io/${{ github.repository }}:${{ github.event.pull_request.head.sha || github.sha }}
       
